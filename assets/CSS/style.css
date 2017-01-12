@@ -32,3 +32,9 @@ h3, input {
     text-shadow: 1px 1px 0 #2be70e, -1px -1px 0 #2be70e, 1px -1px 0 #2be70e, -1px 1px 0 #2be70e, 0px 1px 0 #2be70e, 1px 0px 0 #2be70e, 0px -1px 0 #2be70e, -1px 0px 0 #2be70e, 3px 3px 2px #000000;    
     cursor: pointer;
 }
+
+.item {
+    float: left;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}

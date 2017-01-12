@@ -1,8 +1,9 @@
 $(document).ready(function() {
 
-	var movieArray= ["Re-Animator", "Alien", "Texas Chainsaw Massacre", "The Fly", "They Live", "Dead Alive", "Samurai Cop", "Riki-Oh"];
+	var movieArray= ["Re-Animator", "Evil Dead", "Texas Chainsaw Massacre", "The Fly", "They Live", "City of the Living Dead", "Samurai Cop", "Riki-Oh"];
 
 	// function newButton() {
+		$("#buttons").empty();
 
 		for (var i = 0; i < movieArray.length; i++) {
 			
@@ -17,6 +18,7 @@ $(document).ready(function() {
 	// }
 
 	$("#submit").on("click", function(event) {
+
 		var movie = $("#movieText").val();
 
 		movieArray.push(movie);
@@ -25,6 +27,8 @@ $(document).ready(function() {
 	});
 
 	$("button").on("click", function() {
+		$("#gifs").empty();
+
 		var movie = $(this).attr("data-movie");
 	    
 	    var queryURL = "http://api.giphy.com/v1/gifs/search?q=" +
@@ -55,5 +59,7 @@ $(document).ready(function() {
 	      	}
 	      });
 	});
+
+	// newButton();
 
 });
