@@ -34,7 +34,25 @@ $(document).ready(function() {
 	        url: queryURL,
 	        method: "GET"
 	      }).done(function(response) {
-	      	console.log(response);
+	      	console.log(response.data);
+
+	      	var results = response.data;
+
+	      	for (var i = 0; i < results.length; i++) {
+	      		
+	      		var newDiv = $("<div class='item'>");
+
+		      	var newImg = $("<img>");
+
+		      	newImg.attr("src", results[i].images.fixed_height.url);
+		      	// newImg.attr("data-status");
+		      	// newImg.attr("data-animated");
+		      	// newImg.attr("data-still");
+
+		      	newDiv.append(newImg);
+
+		      	$("#gifs").prepend(newDiv);
+	      	}
 	      });
 	});
 
