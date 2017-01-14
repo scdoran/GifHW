@@ -35,10 +35,7 @@ $(document).ready(function() {
 	        method: "GET"
 	      }).done(function(response) {
 
-	      	var results = response.data;
-
-	      	console.log(results);
-	      	
+	      	var results = response.data;	      	
 
 	      	for (var i = 0; i < results.length; i++) {
 	      		// Variable for creating a new div for each image and h3 element.
