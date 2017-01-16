@@ -27,7 +27,7 @@ $(document).ready(function() {
 		// Would place "?rating=" + rating + in the URL below if I wanted to use it. 
 		// Adding this parameter messes with the results too much so I decided to keep it out.
 	    
-	    var queryURL = "http://api.giphy.com/v1/gifs/search?q=" +
+	    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
 	        movie + "&api_key=dc6zaTOxFJmzC&limit=10";
 
 	      $.ajax({
