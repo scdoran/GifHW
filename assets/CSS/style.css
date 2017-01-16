@@ -1,8 +1,11 @@
-body {
+* {
      margin: 0;
-     background: url("../images/stardust.png");
+     background: url("../images/stardust.png") center center fixed;
      background-repeat: no-repeat;
      background-size: cover;
+     -webkit-background-size: cover;
+     -moz-background-size: cover;
+     -o-background-size: cover;
 }
 
 @font-face {
@@ -35,7 +38,7 @@ input {
 
 .item {
     float: left;
-    margin-left: 40px;
+    margin-left: 22px;
     margin-top: 5px;
     margin-bottom: 5px;
 }

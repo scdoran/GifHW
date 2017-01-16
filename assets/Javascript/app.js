@@ -43,8 +43,9 @@ $(document).ready(function() {
 
 		      	var newImg = $("<img>");
 		      	// Added class, animated, still and data-status in order to allow the user to animate and pause the GIFs that appear.
-		      	newImg.addClass("gif");
+		      	newImg.addClass("gif img-responsive");
 		      	newImg.attr("src", results[i].images.fixed_height_still.url);
+		      	newImg.attr("alt", "gif image here");
 		      	newImg.attr("data-status", "still");
 		      	newImg.attr("data-animated", results[i].images.fixed_height.url);
 		      	newImg.attr("data-still", results[i].images.fixed_height_still.url);
