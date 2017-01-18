@@ -2,32 +2,32 @@
 <html>
 <head>
 	<title>Horror Gifs</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="assets/CSS/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
 	<script src="https://code.jquery.com/jquery-2.2.0.js"></script>
 </head>
 <body>
-	<div class="container">
-
-		<div class="row">
-			<h1 id="header">Horror Movie GIF Search</h1>
-		</div>
+	<div class="container-fluid">
 
 		<div class="row text-center">
-			<div class="col-xs-6">
-				<form class="navbar-form navbar-left" role="search">
-				  <div class="form-group">
-				    <input type="text" class="form-control" id="movieText" placeholder="Search...if you dare!">
-				  </div>
-				  <button type="submit" id="submit" class="btn btn-default">Search</button>
-				</form>
-			</div>
-
-			<div class="col-xs-6">
-				<div id="buttons"></div>
-			</div>
+			<h1> Horror Movie GIF Search</h1>
+			<form class="navbar-form" role="search">
+				<div class="form-group">
+				   <input type="text" class="form-control" id="movieText" placeholder="Search...if you dare!">
+				</div>
+				<button type="submit" id="submit" class="btn btn-default">Search</button>
+				<button type="submit" id="clear" class="btn btn-default">Reset</button>
+			</form>
 		</div>
+			<!-- <div class="col-xs-6"> -->
+		<div class="row text-center"> 
+			<h1> Movie Buttons</h1>
+			<div id="buttons"></div>
+			<div id="newButtons"></div>
+		</div>
+	</div>
 		
 		<div id="gifs"></div>
 		

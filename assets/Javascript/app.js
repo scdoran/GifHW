@@ -1,20 +1,36 @@
 // Array holding the current movies.
 	var movieArray= ["Re-Animator", "Evil Dead", "Texas Chainsaw Massacre", "The Fly", "They Live", "City of the Living Dead", "Samurai Cop", "Riki-Oh"];
 
+	newMovies = [];
+
 $(document).ready(function() {
 // Function that will create new buttons for anything the user searched.
 	function newButton() {
-		$("#buttons").empty();
+		$("#newButtons").empty();
 		// For loop will create a button for each movie within the movie array.
-		for (var i = 0; i < movieArray.length; i++) {
+		for (var i = 0; i < newMovies.length; i++) {
 			
 			var newButton = $("<button class='btn btn-default movies'>");
 
-			newButton.attr("data-movie", movieArray[i]);
+			newButton.attr("data-movie", newMovies[i]);
 
-			newButton.text(movieArray[i]);
+			newButton.text(newMovies[i]);
 
-			$("#buttons").append(newButton);
+			$("#newButtons").append(newButton);
+		}
+	}
+
+	function oldButton() {
+		// For loop will create a button for each movie within the movie array.
+		for (var i = 0; i < movieArray.length; i++) {
+			
+			var movieButton = $("<button class='btn btn-default movies'>");
+
+			movieButton.attr("data-movie", movieArray[i]);
+
+			movieButton.text(movieArray[i]);
+
+			$("#buttons").append(movieButton);
 		}
 	}
 // Function for pulling data from Giphy API in order to create images and text on the page upon request.
@@ -85,11 +101,25 @@ $(document).ready(function() {
 		// Takes the text entered in the text box.
 		var newMovie = $("#movieText").val().trim();
 		// Pushed the text entered into the existing movie array.
-		movieArray.push(newMovie);
+		newMovies.push(newMovie);
 		// Makes the text entered in the text box go back to being blank.
 		$("#movieText").val(" ");
 		// Calls the function that creates a new button on the page.
 		newButton();
+	});
+
+	// When the user clicks the submit button...
+	$("#clear").on("click", function() {
+		event.preventDefault();
+
+		// Clears the array holding the newly added movies from previous session.
+		newMovies = [];
+
+		// Calls the function that clears the new buttons on the page.
+		$("#newButtons").empty();
+		
+		// Clears the GIFS from the page.
+		$("#gifs").empty();
 	});
 	// When someone clicks on the button with the class of ".movies", the function for the gifs to show will be called.
 	$(document).on("click", ".movies", gifShow);
@@ -97,6 +127,6 @@ $(document).ready(function() {
 	$(document).on("click", ".gif", changeStatus);
 // Calls the function that creates and displays buttons globally 
 // so the buttons for the movies in the movie array will generate upon the page loading.
-	newButton();
+	oldButton();
 
 });
