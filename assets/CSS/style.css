@@ -30,7 +30,7 @@ input {
 	color: #cccccc;
 }
 
-#buttons:hover {
+.movies:hover {
     color: white;
     text-shadow: 1px 1px 0 #2be70e, -1px -1px 0 #2be70e, 1px -1px 0 #2be70e, -1px 1px 0 #2be70e, 0px 1px 0 #2be70e, 1px 0px 0 #2be70e, 0px -1px 0 #2be70e, -1px 0px 0 #2be70e, 3px 3px 2px #000000;    
     cursor: pointer;
@@ -41,4 +41,8 @@ input {
     margin-left: 22px;
     margin-top: 5px;
     margin-bottom: 5px;
+}
+
+.gif:hover {
+    box-shadow: 10px 10px 5px grey;
 }
